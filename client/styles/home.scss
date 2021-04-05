@@ -1,0 +1,325 @@
+main.home {
+  section.home__hero {
+    position: relative;
+    height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: var(--navHeight);
+      padding: 0 var(--contentPaddingX);
+
+      p {
+        font-family: 'Amatic SC';
+        font-size: 2.2rem;
+      }
+    }
+
+    .home__banner {
+      position: relative;
+      padding: 0 var(--contentPaddingX) var(--contentPaddingY)
+        var(--contentPaddingX);
+      height: calc(100vh - var(--navHeight));
+      display: flex;
+      justify-content: space-between;
+
+      .home__banner__left,
+      .home__banner__right {
+        max-width: calc(100vw - 2 * var(--contentPaddingX));
+      }
+
+      .home__banner__left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5rem;
+        width: 50%;
+        overflow: hidden;
+        margin-top: -10vh;
+
+        .home__banner__logo {
+          position: relative;
+
+          div {
+            overflow: hidden;
+
+            h1,
+            p {
+              transform: translateY(-110%);
+              animation: comeFromTop 0.6s forwards;
+            }
+
+            h1 {
+              font-size: 11rem;
+              font-weight: bold;
+              white-space: nowrap;
+              gap: 4rem;
+              line-height: 1em;
+              font-family: 'Amatic SC';
+              text-align-last: justify;
+              animation-delay: 0.9s;
+            }
+
+            p {
+              font-size: 48px;
+              line-height: 1em;
+              text-align-last: justify;
+              letter-spacing: 10px;
+              animation-delay: 1.1s;
+            }
+          }
+
+          &::before,
+          &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 20%;
+            height: 7px;
+            background-color: var(--pink);
+          }
+
+          &::before {
+            top: -0.5rem;
+            left: 0;
+            animation: comeAndScaleDownFromRight 1.2s forwards;
+          }
+
+          &::after {
+            bottom: -1rem;
+            right: 0;
+            animation: comeAndScaleDownFromLeft 1.2s forwards;
+          }
+        }
+
+        > p {
+          font-size: 1.5rem;
+          opacity: 0;
+          animation: fadeIn 1s forwards;
+          animation-delay: 1.3s;
+        }
+      }
+
+      .home__banner__right {
+        width: 33%;
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: -5;
+        opacity: 0;
+        transform-style: preserve-3d;
+        transform: perspective(2000px) rotateY(-25deg) rotateX(20deg) scale(1);
+        animation: fadeIn 1s forwards;
+        animation-delay: 0.4s;
+
+        svg {
+          width: 100%;
+          height: auto;
+
+          circle {
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+          }
+
+          @for $i from 0 through 3 {
+            circle#cirlce#{$i} {
+              animation-delay: 0.5s * $i + 5s;
+            }
+          }
+
+          mask rect {
+            transform: scaleX(0);
+            transform-origin: left;
+          }
+
+          @for $i from 0 through 100 {
+            mask#mask#{$i} rect {
+              animation: writeCode 0.5s forwards linear;
+              animation-delay: $i * 0.5s + 1.2s;
+            }
+          }
+        }
+      }
+    }
+
+    &::after {
+      content: 'DEV';
+      font-family: 'Squada One';
+      font-size: 50vw;
+      color: rgba(var(--pinkR), var(--pinkG), var(--pinkB), 0.05);
+      position: absolute;
+      top: 50vh;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: -10;
+    }
+
+    .home__banner__arrow {
+      cursor: pointer;
+      position: absolute;
+      top: calc(100vh - 1.5rem - 19px);
+      left: 50vw;
+      transform: translateX(-50%);
+
+      svg {
+        opacity: 0;
+        animation: fadeInFromTop 3s infinite;
+        animation-delay: 2s;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1919px) {
+  main.home
+    section.home__hero
+    .home__banner
+    .home__banner__left
+    .home__banner__logo
+    div {
+    h1 {
+      font-size: 8.9vw;
+    }
+
+    p {
+      font-size: 2.17vw;
+      letter-spacing: 0.62vw;
+    }
+  }
+}
+
+@media screen and (max-width: 1535px) {
+  main.home
+    section.home__hero
+    .home__banner
+    .home__banner__left
+    .home__banner__logo
+    div {
+    h1 {
+      font-size: 8.75vw;
+    }
+
+    p {
+      font-size: 2.1vw;
+    }
+  }
+}
+
+@media screen and (max-width: 1439px) {
+  main.home
+    section.home__hero
+    .home__banner
+    .home__banner__left
+    .home__banner__logo {
+    div {
+      h1 {
+        font-size: 8.4vw;
+      }
+
+      p {
+        font-size: 1.96vw;
+      }
+    }
+    &::after,
+    &::before {
+      height: 5px;
+    }
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  main.home
+    section.home__hero
+    .home__banner
+    .home__banner__left
+    .home__banner__logo
+    div {
+    h1 {
+      font-size: 8.95vw;
+    }
+
+    p {
+      font-size: 2.19vw;
+    }
+  }
+}
+
+@media screen and (max-width: 1135px) {
+  main.home
+    section.home__hero
+    .home__banner
+    .home__banner__left
+    .home__banner__logo
+    div {
+    h1 {
+      font-size: 8.6vw;
+    }
+
+    p {
+      font-size: 2.04vw;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  main.home section.home__hero {
+    height: auto;
+    max-height: none;
+
+    .home__banner {
+      min-height: calc(100vh - var(--navHeight));
+      height: auto;
+      max-height: none;
+      display: block;
+
+      .home__banner__left {
+        margin: 0;
+        padding: 2rem 0;
+        justify-content: flex-start;
+        gap: 2rem;
+        width: 100%;
+
+        .home__banner__logo div {
+          h1 {
+            font-size: 17.9vw;
+          }
+
+          p {
+            font-size: 4.5vw;
+            letter-spacing: 1.175vw;
+          }
+        }
+      }
+
+      .home__banner__right {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main.home section.home__hero {
+    nav p {
+      font-size: 1.75rem;
+    }
+
+    .home__banner {
+      .home__banner__left {
+        .home__banner__logo div {
+          h1 {
+            font-size: 20vw;
+          }
+
+          p {
+            font-size: 5vw;
+            letter-spacing: 1.2vw;
+          }
+        }
+      }
+    }
+  }
+}

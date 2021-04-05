@@ -1,0 +1,61 @@
+@keyframes writeCode {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes comeAndScaleDownFromLeft {
+  from {
+    transform: translateX(-800%) scalex(8);
+  }
+
+  to {
+    transform: translateX(0) scalex(1);
+  }
+}
+
+@keyframes comeAndScaleDownFromRight {
+  from {
+    transform: translateX(800%) scalex(8);
+  }
+
+  to {
+    transform: translateX(0) scalex(1);
+  }
+}
+
+@keyframes comeFromTop {
+  from {
+    transform: translateY(-110%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
