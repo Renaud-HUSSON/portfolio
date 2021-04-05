@@ -1,0 +1,41 @@
+:root {
+  // Colors
+  --pink: #fe4a57;
+  --pinkR: 254;
+  --pinkG: 74;
+  --pinkB: 87;
+  --black: #0f0f10;
+  --blackR: 15;
+  --blackG: 15;
+  --blackB: 16;
+
+  --navHeight: 10rem;
+
+  --contentPaddingX: 11rem;
+  --contentPaddingY: 4rem;
+}
+
+@media screen and (max-width: 1280px) {
+  :root {
+    --contentPaddingX: 8rem;
+    --contentPaddingY: 3.2rem;
+
+    --navHeight: 6.5rem;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  :root {
+    --contentPaddingX: 5rem;
+    --contentPaddingY: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    --contentPaddingX: 1.5rem;
+    --contentPaddingY: 1rem;
+
+    --navHeight: 5rem;
+  }
+}
