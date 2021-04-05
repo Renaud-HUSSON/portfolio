@@ -1,6 +1,11 @@
 import Particles from 'react-tsparticles'
+import { BannerInterface } from '../../interfaces'
 
-export const HeroBanner = () => {
+interface HeroBannerProps {
+  banner: BannerInterface
+}
+
+export const HeroBanner = ({ banner }: HeroBannerProps) => {
   return (
     <>
       <Particles
@@ -55,10 +60,7 @@ export const HeroBanner = () => {
                 <p>Développeur web frontend</p>
               </div>
             </div>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
-              mattis gravida leo ipsum felis metus tellus.
-            </p>
+            <p>{banner.description}</p>
           </div>
           <div className='home__banner__right'>
             <svg
