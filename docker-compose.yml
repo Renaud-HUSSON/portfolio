@@ -8,6 +8,8 @@ services:
     restart: always
     depends_on:
       - strapi
+    volumes:
+      - ./client:/client
     command: npm run dev
     restart: always
   # END CLIENT
