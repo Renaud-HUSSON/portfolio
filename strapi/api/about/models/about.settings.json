@@ -1,0 +1,26 @@
+{
+  "kind": "singleType",
+  "collectionName": "abouts",
+  "info": {
+    "name": "about",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "competences": {
+      "type": "text",
+      "required": true
+    },
+    "parcours": {
+      "type": "text"
+    }
+  }
+}
