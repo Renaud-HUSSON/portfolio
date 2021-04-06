@@ -49,6 +49,9 @@
     "short_description": {
       "type": "string",
       "required": true
+    },
+    "keywords": {
+      "type": "string"
     }
   }
 }
