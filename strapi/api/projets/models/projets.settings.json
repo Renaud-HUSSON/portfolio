@@ -52,6 +52,10 @@
     },
     "keywords": {
       "type": "string"
+    },
+    "slug": {
+      "type": "string",
+      "required": false
     }
   }
 }
