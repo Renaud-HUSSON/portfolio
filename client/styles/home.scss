@@ -160,7 +160,7 @@ main.home {
     .home__banner__arrow {
       cursor: pointer;
       position: absolute;
-      top: calc(100vh - 1.5rem - 19px);
+      bottom: 1rem;
       left: 50vw;
       transform: translateX(-50%);
 
