@@ -8,6 +8,7 @@ export const GET_HOME_DATA = gql`
     projets {
       nom
       short_description
+      keywords
       banner {
         url
         alternativeText

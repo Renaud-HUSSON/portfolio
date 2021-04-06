@@ -27,6 +27,7 @@ export type ProjetHomepage = {
   nom: string
   banner: uploadImage
   short_description: string
+  keywords: string
 }
 
 export type Projet = ProjetHomepage & {

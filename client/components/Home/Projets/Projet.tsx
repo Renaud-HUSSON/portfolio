@@ -31,6 +31,9 @@ export const Projet = ({ projet, index }: ProjetProps) => {
         <p>
           <span>{projet.short_description}</span>
         </p>
+        <p>
+          <span>{projet.keywords}</span>
+        </p>
       </div>
       {projet.banner.formats !== null ? (
         <picture>
