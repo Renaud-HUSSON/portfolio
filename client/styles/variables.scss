@@ -10,17 +10,23 @@
   --blackB: 16;
 
   --navHeight: 10rem;
+  --h2fontSize: 5rem;
+  --h3fontSize: 2.5rem;
 
   --contentPaddingX: 11rem;
   --contentPaddingY: 4rem;
+  --h3bottomMargin: 4rem;
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1279px) {
   :root {
+    --navHeight: 6.5rem;
+    --h2fontSize: 4rem;
+    --h3fontSize: 2.25rem;
+
     --contentPaddingX: 8rem;
     --contentPaddingY: 3.2rem;
-
-    --navHeight: 6.5rem;
+    --h3bottomMargin: 2.5rem;
   }
 }
 
@@ -33,9 +39,12 @@
 
 @media screen and (max-width: 768px) {
   :root {
+    --navHeight: 5rem;
+    --h2fontSize: 3rem;
+    --h3fontSize: 1.75rem;
+
     --contentPaddingX: 1.5rem;
     --contentPaddingY: 1rem;
-
-    --navHeight: 5rem;
+    --h3bottomMargin: 1.5rem;
   }
 }

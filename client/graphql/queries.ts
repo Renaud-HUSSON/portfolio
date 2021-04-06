@@ -5,5 +5,14 @@ export const GET_HOME_DATA = gql`
     banner {
       description
     }
+    projets {
+      nom
+      short_description
+      banner {
+        url
+        alternativeText
+        formats
+      }
+    }
   }
 `
