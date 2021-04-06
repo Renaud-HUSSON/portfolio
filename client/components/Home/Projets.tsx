@@ -1,12 +1,14 @@
+import { RefObject } from 'react'
 import { ProjetHomepage } from '../../interfaces'
 
 interface ProjetsProps {
   projets: ProjetHomepage[]
+  projetsRef: RefObject<HTMLElement>
 }
 
-export const Projets = ({ projets }: ProjetsProps) => {
+export const Projets = ({ projets, projetsRef }: ProjetsProps) => {
   return (
-    <section className='home__projets'>
+    <section className='home__projets' ref={projetsRef}>
       <h2>PROJETS</h2>
       {projets.map((projet, i) => {
         return (

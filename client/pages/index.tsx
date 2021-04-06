@@ -1,5 +1,6 @@
 import { ApolloClient, InMemoryCache } from '@apollo/client'
 import { GetStaticPropsResult } from 'next'
+import { useRef } from 'react'
 import { HeroBanner } from '../components/Home/HeroBanner'
 import { Projets } from '../components/Home/Projets'
 import { GET_HOME_DATA } from '../graphql/queries'
@@ -10,12 +11,16 @@ interface HomeProps {
   projets: ProjetHomepage[]
 }
 
-const Home = ({ banner, projets }: HomeProps) => (
-  <main className='home'>
-    <HeroBanner banner={banner} />
-    <Projets projets={projets} />
-  </main>
-)
+const Home = ({ banner, projets }: HomeProps) => {
+  const projetsRef = useRef<HTMLElement>(null)
+
+  return (
+    <main className='home'>
+      <HeroBanner banner={banner} projetsRef={projetsRef} />
+      <Projets projets={projets} projetsRef={projetsRef} />
+    </main>
+  )
+}
 
 export const getStaticProps = async (): Promise<
   GetStaticPropsResult<HomeProps>

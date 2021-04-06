@@ -1,11 +1,17 @@
+import { RefObject } from 'react'
 import Particles from 'react-tsparticles'
-import { BannerInterface } from '../../interfaces'
+import { Banner } from '../../interfaces'
 
 interface HeroBannerProps {
-  banner: BannerInterface
+  banner: Banner
+  projetsRef: RefObject<HTMLElement>
 }
 
-export const HeroBanner = ({ banner }: HeroBannerProps) => {
+export const HeroBanner = ({ banner, projetsRef }: HeroBannerProps) => {
+  const handleArrowClick = () => {
+    projetsRef.current?.scrollIntoView()
+  }
+
   return (
     <>
       <Particles
@@ -704,7 +710,7 @@ export const HeroBanner = ({ banner }: HeroBannerProps) => {
             </svg>
           </div>
         </div>
-        <div className='home__banner__arrow'>
+        <div className='home__banner__arrow' onClick={handleArrowClick}>
           <svg
             width='16'
             height='19'
