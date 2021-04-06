@@ -183,14 +183,34 @@ main.home {
       align-items: center;
       padding-bottom: var(--projetItemBottomPadding);
 
-      &.home__projets__item__right {
+      &.home__projets__item--right {
         > div {
           order: 1;
         }
 
         picture,
         > img {
-          transform: perspective(2000px) rotateY(15deg) rotateX(10deg);
+          transform: translateX(-25%);
+        }
+      }
+
+      &.home__projets__item--visible {
+        > div * span {
+          animation: comeFromTop 0.8s forwards;
+          animation-delay: 0.3s;
+        }
+
+        picture,
+        > img {
+          opacity: 1;
+          transform: perspective(1000px) rotateY(-15deg) rotateX(20deg);
+        }
+
+        &.home__projets__item--right {
+          picture,
+          > img {
+            transform: perspective(2000px) rotateY(15deg) rotateX(10deg);
+          }
         }
       }
 
@@ -202,15 +222,34 @@ main.home {
         width: 45%;
       }
 
-      > div p {
-        font-size: 1.5rem;
+      > div {
+        h3,
+        p {
+          overflow: hidden;
+
+          span {
+            will-change: transform;
+            transform: translateY(-100%);
+          }
+        }
+
+        p {
+          font-size: 1.5rem;
+
+          span {
+            display: block;
+          }
+        }
       }
 
       picture,
       > img {
+        opacity: 0;
         height: fit-content;
+        transition: 0.8s;
+        transform: translateX(25%);
         transform-style: preserve-3d;
-        transform: perspective(1000px) rotateY(-15deg) rotateX(20deg);
+        will-change: transform;
 
         img {
           width: 100%;
@@ -302,15 +341,30 @@ main.home {
       --projetItemBottomPadding: 6rem;
       flex-direction: column;
 
-      &.home__projets__item__right {
+      &.home__projets__item--visible {
+        picture,
+        > img {
+          transform: perspective(1000px) rotateY(-15deg) rotateX(20deg)
+            scale(0.8);
+        }
+
+        &.home__projets__item--right {
+          picture,
+          > img {
+            transform: perspective(1000px) rotateY(15deg) rotateX(20deg)
+              scale(0.8);
+          }
+        }
+      }
+
+      &.home__projets__item--right {
         > div {
           order: 0;
         }
 
         picture,
         > img {
-          transform: perspective(1000px) rotateY(15deg) rotateX(20deg)
-            scale(0.8);
+          transform: scale(0.8) translateX(-25%);
         }
       }
 
@@ -324,7 +378,7 @@ main.home {
 
       picture,
       > img {
-        transform: perspective(1000px) rotateY(-15deg) rotateX(20deg) scale(0.8);
+        transform: scale(0.8) translateX(25%);
       }
     }
   }
