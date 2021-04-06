@@ -15,7 +15,7 @@
 
   --contentPaddingX: 11rem;
   --contentPaddingY: 4rem;
-  --h3bottomMargin: 4rem;
+  --h3bottomMargin: 1.5rem;
 }
 
 @media screen and (max-width: 1279px) {
@@ -26,7 +26,6 @@
 
     --contentPaddingX: 8rem;
     --contentPaddingY: 3.2rem;
-    --h3bottomMargin: 2.5rem;
   }
 }
 
@@ -45,6 +44,5 @@
 
     --contentPaddingX: 1.5rem;
     --contentPaddingY: 1rem;
-    --h3bottomMargin: 1.5rem;
   }
 }
