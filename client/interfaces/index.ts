@@ -1,3 +1,7 @@
+export type OptionalRecord<K extends keyof any, T> = {
+  [P in K]?: T
+}
+
 export type imageFormats = 'thumbnail' | 'large' | 'medium' | 'small'
 
 export type imageFormatContent = {
@@ -12,7 +16,7 @@ export type imageFormatContent = {
   url: string
 }
 
-export type formatImage = Record<imageFormats, imageFormatContent>
+export type formatImage = OptionalRecord<imageFormats, imageFormatContent>
 
 export type uploadImage = {
   alternativeText: string
@@ -32,6 +36,7 @@ export type ProjetHomepage = {
 
 export type Projet = ProjetHomepage & {
   id: number
+  slug: string
   images_mobile: uploadImage[]
   image_pc: uploadImage[]
   long_description: string
