@@ -5,7 +5,8 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "type-check": "tsc"
+    "type-check": "tsc",
+    "test": "jest"
   },
   "dependencies": {
     "@apollo/client": "^3.3.14",
@@ -15,12 +16,22 @@
     "react-dom": "^17.0.1",
     "react-intersection-observer": "^8.31.0",
     "react-tsparticles": "^1.25.0",
-    "sass": "^1.32.8"
+    "sass": "^1.32.8",
+    "ts-node": "^9.1.1"
   },
   "devDependencies": {
+    "@testing-library/dom": "^7.30.3",
+    "@testing-library/jest-dom": "^5.11.10",
+    "@testing-library/react": "^11.2.6",
+    "@testing-library/react-hooks": "^5.1.1",
     "@types/node": "^12.12.21",
     "@types/react": "^17.0.2",
     "@types/react-dom": "^17.0.1",
+    "babel-jest": "^26.6.3",
+    "jest": "^26.6.3",
+    "jest-canvas-mock": "^2.3.1",
+    "jest-dom": "^4.0.0",
+    "ts-jest": "^26.5.4",
     "typescript": "4.0"
   },
   "license": "MIT"
