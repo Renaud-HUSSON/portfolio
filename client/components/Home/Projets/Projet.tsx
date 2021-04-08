@@ -21,6 +21,7 @@ export const Projet = ({ projet, index }: ProjetProps) => {
       } ${inView && 'home__projets__item--visible'}`}
       key={index}
       ref={ref}
+      data-testid='projets__item'
     >
       <div>
         <h3>

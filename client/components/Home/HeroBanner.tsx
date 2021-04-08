@@ -5,13 +5,16 @@ import { Banner } from '../../interfaces'
 interface HeroBannerProps {
   banner: Banner
   projetsRef: RefObject<HTMLElement>
+  handleArrowClick?: () => void
 }
 
-export const HeroBanner = ({ banner, projetsRef }: HeroBannerProps) => {
-  const handleArrowClick = () => {
+export const HeroBanner = ({
+  banner,
+  projetsRef,
+  handleArrowClick = () => {
     projetsRef.current?.scrollIntoView()
-  }
-
+  },
+}: HeroBannerProps) => {
   return (
     <>
       <Particles
@@ -710,7 +713,11 @@ export const HeroBanner = ({ banner, projetsRef }: HeroBannerProps) => {
             </svg>
           </div>
         </div>
-        <div className='home__banner__arrow' onClick={handleArrowClick}>
+        <div
+          className='home__banner__arrow'
+          onClick={handleArrowClick}
+          data-testid='scroll-down-arrow'
+        >
           <svg
             width='16'
             height='19'
