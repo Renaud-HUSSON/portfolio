@@ -1,8 +1,8 @@
 {
-  "kind": "collectionType",
+  "kind": "singleType",
   "collectionName": "competences",
   "info": {
-    "name": "competences"
+    "name": "Competences"
   },
   "options": {
     "increments": true,
@@ -10,18 +10,8 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "nom": {
-      "type": "string",
-      "required": true
-    },
-    "image": {
-      "model": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images"
-      ],
-      "plugin": "upload",
-      "required": true
+    "technologies": {
+      "collection": "technologies"
     }
   }
 }
