@@ -56,6 +56,24 @@
     "slug": {
       "type": "string",
       "required": false
+    },
+    "github": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "video": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "technologies": {
+      "collection": "technologies"
     }
   }
 }
