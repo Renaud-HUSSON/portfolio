@@ -3,6 +3,23 @@
   padding: 0;
   font-family: 'Antic', sans-serif;
   box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: hsla(0, 0%, 60.8%, 0.5) white;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 15px;
+}
+
+*::-webkit-scrollbar-track {
+  background: white;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: hsla(0, 0%, 60.8%, 0.5);
+  border-radius: 20px;
+  border: 5px solid white;
 }
 
 html {
@@ -15,7 +32,8 @@ h2 {
   padding-bottom: var(--contentPaddingY);
 }
 
-h3 span {
+h3 span,
+pinklines {
   font-size: var(--h3fontSize);
   font-weight: 400;
   position: relative;
@@ -52,6 +70,10 @@ section {
 
 section:not(.home__hero) {
   padding: var(--contentPaddingY) var(--contentPaddingX);
+}
+
+a {
+  color: var(--blue);
 }
 
 @media (max-width: 768px) {
