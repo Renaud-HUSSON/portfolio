@@ -33,7 +33,7 @@
       "plugin": "upload",
       "required": true
     },
-    "image_pc": {
+    "images_pc": {
       "collection": "file",
       "via": "related",
       "allowedTypes": [
@@ -74,6 +74,13 @@
     },
     "technologies": {
       "collection": "technologies"
+    },
+    "debut": {
+      "type": "date",
+      "required": true
+    },
+    "fin": {
+      "type": "date"
     }
   }
 }
