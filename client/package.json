@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@apollo/client": "^3.3.14",
+    "dateformat": "^4.5.1",
     "graphql": "^15.5.0",
     "next": "latest",
     "react": "^17.0.1",
@@ -24,6 +25,7 @@
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.6",
     "@testing-library/react-hooks": "^5.1.1",
+    "@types/dateformat": "^3.0.1",
     "@types/node": "^12.12.21",
     "@types/react": "^17.0.2",
     "@types/react-dom": "^17.0.1",
