@@ -2,9 +2,9 @@ export type OptionalRecord<K extends keyof any, T> = {
   [P in K]?: T
 }
 
-export type imageFormats = 'thumbnail' | 'large' | 'medium' | 'small'
+export type ImageFormats = 'thumbnail' | 'large' | 'medium' | 'small'
 
-export type imageFormatContent = {
+export type ImageFormatContent = {
   name: string
   hash: string
   ext: string
@@ -16,12 +16,24 @@ export type imageFormatContent = {
   url: string
 }
 
-export type formatImage = OptionalRecord<imageFormats, imageFormatContent>
-
-export type uploadImage = {
+export type CoreMediaFile = {
   alternativeText: string
-  formats: formatImage
   url: string
+}
+
+export type FormatImage = OptionalRecord<ImageFormats, ImageFormatContent>
+
+export type ImageProps = {
+  formats: FormatImage
+}
+
+export type Image = CoreMediaFile & ImageProps
+
+export type Video = CoreMediaFile
+
+export type Technologie = {
+  nom: string
+  image: Image
 }
 export type Banner = {
   description: string
@@ -29,15 +41,26 @@ export type Banner = {
 
 export type ProjetHomepage = {
   nom: string
-  banner: uploadImage
+  banner: Image
   short_description: string
   keywords: string
+  slug: string
 }
 
-export type Projet = ProjetHomepage & {
+export type ProjetPage = {
   id: number
+  nom: string
   slug: string
-  images_mobile: uploadImage[]
-  image_pc: uploadImage[]
+  banner: Image
+  images_mobile: Image[]
+  images_pc: Image[]
   long_description: string
+  technologies: Technologie[]
+  url: string
+  github: string
+  video: Video
+  debut: Date
+  fin: Date
 }
+
+export type Projet = ProjetHomepage & ProjetPage
