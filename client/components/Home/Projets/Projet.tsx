@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { IntersectionOptions, useInView } from 'react-intersection-observer'
 import { ProjetHomepage } from '../../../interfaces'
 
@@ -34,6 +35,11 @@ export const Projet = ({ projet, index }: ProjetProps) => {
         </p>
         <p>
           <span>{projet.keywords}</span>
+        </p>
+        <p>
+          <Link href={`/projet/${projet.slug}`}>
+            <a>En savoir plus</a>
+          </Link>
         </p>
       </div>
       {projet.banner.formats !== null ? (

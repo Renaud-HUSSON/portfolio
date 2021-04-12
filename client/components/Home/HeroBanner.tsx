@@ -12,7 +12,9 @@ export const HeroBanner = ({
   banner,
   projetsRef,
   handleArrowClick = () => {
-    projetsRef.current?.scrollIntoView()
+    projetsRef.current?.scrollIntoView({
+      behavior: 'smooth',
+    })
   },
 }: HeroBannerProps) => {
   return (
