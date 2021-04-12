@@ -10,6 +10,7 @@ describe('Projets', () => {
   const projets: ProjetHomepage[] = [
     {
       nom: 'nom',
+      slug: 'nom',
       banner: {
         alternativeText: 'alternativetext',
         formats: {},
@@ -20,6 +21,7 @@ describe('Projets', () => {
     },
     {
       nom: 'nom2',
+      slug: 'nom2',
       banner: {
         alternativeText: 'alternativetext2',
         formats: {},

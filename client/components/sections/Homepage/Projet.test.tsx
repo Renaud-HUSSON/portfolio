@@ -5,6 +5,7 @@ import { Projet } from './Projet'
 describe('Projet', () => {
   const projet: ProjetHomepage = {
     nom: 'nom',
+    slug: 'nom',
     banner: {
       alternativeText: 'alternativetext',
       formats: {},

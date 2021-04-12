@@ -1,6 +1,6 @@
 import { RefObject } from 'react'
 import Particles from 'react-tsparticles'
-import { Banner } from '../../interfaces'
+import { Banner } from '../../../interfaces'
 
 interface HeroBannerProps {
   banner: Banner

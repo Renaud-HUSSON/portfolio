@@ -1,8 +1,8 @@
 import { ApolloClient, InMemoryCache } from '@apollo/client'
 import { GetStaticPropsResult } from 'next'
 import { useRef } from 'react'
-import { HeroBanner } from '../components/Home/HeroBanner'
-import { Projets } from '../components/Home/Projets/Projets'
+import { HeroBanner } from '../components/sections/Homepage/HeroBanner'
+import { Projets } from '../components/sections/Homepage/Projets'
 import { GET_HOME_DATA } from '../graphql/queries'
 import { Banner, ProjetHomepage } from '../interfaces/index'
 

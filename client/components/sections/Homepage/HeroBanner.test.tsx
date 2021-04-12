@@ -1,6 +1,6 @@
 import { render, screen, fireEvent } from '@testing-library/react'
 import { useRef } from 'react'
-import { Banner } from '../../interfaces'
+import { Banner } from '../../../interfaces'
 import { renderHook } from '@testing-library/react-hooks'
 
 import { HeroBanner } from './HeroBanner'
