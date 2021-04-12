@@ -29,6 +29,11 @@ main {
   }
 
   section.projet__presentation {
+    nav {
+      height: auto;
+      margin-bottom: 1rem;
+    }
+
     .projet__presentation__content {
       display: flex;
       justify-content: space-between;
