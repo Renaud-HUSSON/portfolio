@@ -31,7 +31,13 @@ export const Video = ({ projet }: VideoProps) => {
 
   return (
     <section className='projet__video'>
-      <video src={projet.video.url} ref={videoRefs} loop></video>
+      <video
+        src={projet.video.url}
+        ref={videoRefs}
+        loop
+        data-testid='project-video'
+        data-playing={videoInView}
+      ></video>
     </section>
   )
 }

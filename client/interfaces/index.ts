@@ -33,7 +33,7 @@ export type Video = CoreMediaFile
 
 export type Technologie = {
   nom: string
-  image: Image
+  image?: Image
 }
 export type Banner = {
   description: string
@@ -48,16 +48,14 @@ export type ProjetHomepage = {
 }
 
 export type ProjetPage = {
-  id: number
   nom: string
   slug: string
-  banner: Image
   images_mobile: Image[]
   images_pc: Image[]
   long_description: string
   technologies: Technologie[]
-  url: string
-  github: string
+  url?: string
+  github?: string
   video: Video
   debut: Date
   fin: Date

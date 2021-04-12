@@ -33,7 +33,10 @@ export const Presentation = ({ projet }: PresentationProps) => {
             <p>{projet.long_description}</p>
           </pre>
           {projet.url && (
-            <p className='projet__presentation__text__visit'>
+            <p
+              className='projet__presentation__text__visit'
+              data-testid='project-visit-site'
+            >
               <a href={projet.url} rel='noreferrer' target='_blank'>
                 Visiter le site{' '}
                 <svg
@@ -57,7 +60,11 @@ export const Presentation = ({ projet }: PresentationProps) => {
             <p className='bigger'>TECHNOLOGIES</p>
             <ul>
               {projet.technologies.map((tech, i) => {
-                return <li key={i}>{tech.nom}</li>
+                return (
+                  <li key={i} data-testid='project-techonology'>
+                    {tech.nom}
+                  </li>
+                )
               })}
             </ul>
           </div>
@@ -72,14 +79,20 @@ export const Presentation = ({ projet }: PresentationProps) => {
           <div className='projet__presentation__informations__links'>
             <p className='bigger'>Liens</p>
             {projet.github && (
-              <p className='projet__presentation__github'>
+              <p
+                className='projet__presentation__github'
+                data-testid='project-github'
+              >
                 <a href={projet.github} rel='noreferrer' target='_blank'>
                   github
                 </a>
               </p>
             )}
             {projet.url && (
-              <p className='projet__presentation__url'>
+              <p
+                className='projet__presentation__url'
+                data-testid='project-url'
+              >
                 <a href={projet.url} rel='noreferrer' target='_blank'>
                   site
                 </a>

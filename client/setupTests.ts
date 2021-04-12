@@ -9,3 +9,6 @@ const intersectionObserverMock = () => ({
 window.IntersectionObserver = jest
   .fn()
   .mockImplementation(intersectionObserverMock)
+
+window.HTMLMediaElement.prototype.play = async () => {}
+window.HTMLMediaElement.prototype.pause = async () => {}
