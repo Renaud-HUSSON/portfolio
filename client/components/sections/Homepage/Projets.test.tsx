@@ -32,10 +32,12 @@ describe('Projets', () => {
     },
   ]
 
+  const projectTestId = 'projets__item'
+
   it('should render n projets', async () => {
     render(<Projets projets={projets} projetsRef={projetsRef.current} />)
 
-    expect(await screen.findAllByTestId('projets__item')).toHaveLength(
+    expect(await screen.findAllByTestId(projectTestId)).toHaveLength(
       projets.length
     )
   })

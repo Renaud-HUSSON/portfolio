@@ -32,16 +32,16 @@ describe('Project Images', () => {
     fin: new Date(),
   }
 
-  it('should render illustrations', () => {
+  beforeEach(() => {
     render(<Images projet={projet} />)
+  })
 
+  it('should render illustrations', () => {
     expect(screen.getByAltText('alternativetext')).toBeInTheDocument()
     expect(screen.getByAltText('mobile alternativetext')).toBeInTheDocument()
   })
 
   it('should render title', () => {
-    render(<Images projet={projet} />)
-
     expect(screen.getByText('Illustrations du site')).toBeInTheDocument()
   })
 })
