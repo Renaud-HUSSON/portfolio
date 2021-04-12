@@ -121,14 +121,13 @@ const ProjetPage = ({ projet }: ProjetProps) => {
       <section className='projet__video'>
         <video src={projet.video.url} ref={videoRefs} loop></video>
       </section>
-      <section className='projet__images__ordinateur'>
+      <section className='projet__images'>
+        <h2>Illustrations du site</h2>
         <ScrollContainer vertical={false} hideScrollbars={false}>
           {projet.images_pc.map((image, i) => {
             return <img src={image.url} alt={image.alternativeText} key={i} />
           })}
         </ScrollContainer>
-      </section>
-      <section className='projet__images__mobile'>
         <ScrollContainer vertical={false} hideScrollbars={false}>
           {projet.images_mobile.map((image, i) => {
             return <img src={image.url} alt={image.alternativeText} key={i} />

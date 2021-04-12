@@ -10,6 +10,8 @@ main {
     font-weight: 700;
     font-family: 'Antic';
     padding-bottom: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 
     &::before,
     &::after {
@@ -69,6 +71,10 @@ main {
       .projet__presentation__informations {
         > div {
           padding-bottom: 2rem;
+
+          &:last-of-type {
+            padding-bottom: 0;
+          }
         }
 
         p.bigger {
@@ -110,10 +116,13 @@ main {
     }
   }
 
-  section.projet__images__ordinateur,
-  section.projet__images__mobile {
+  section.projet__images {
     padding: 0;
-    margin: var(--contentPaddingY) var(--contentPaddingX);
+    margin: 2rem var(--contentPaddingX);
+
+    h2 {
+      margin-bottom: var(--contentPaddingY);
+    }
 
     > div {
       display: flex;
@@ -122,6 +131,10 @@ main {
       img {
         max-height: 30vh;
         min-height: 250px;
+      }
+
+      &:first-of-type {
+        margin-bottom: var(--contentPaddingY);
       }
     }
   }
