@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { RefObject } from 'react'
 import Particles from 'react-tsparticles'
 import { Banner } from '../../../interfaces'
@@ -58,8 +59,12 @@ export const HeroBanner = ({
       />
       <section className='home__hero'>
         <nav>
-          <p>RENAUD HUSSON</p>
-          <p>À PROPOS</p>
+          <Link href='/'>
+            <a>RENAUD HUSSON</a>
+          </Link>
+          <Link href='/a-propos'>
+            <a>À PROPOS</a>
+          </Link>
         </nav>
         <div className='home__banner'>
           <div className='home__banner__left'>

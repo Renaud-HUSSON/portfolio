@@ -22,6 +22,20 @@
   border: 5px solid white;
 }
 
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--navHeight);
+
+  a {
+    font-family: 'Amatic SC';
+    font-size: 2.2rem;
+    color: var(--black);
+    text-decoration: none;
+  }
+}
+
 h2 {
   font-size: var(--h2fontSize);
   font-family: 'Amatic SC';
