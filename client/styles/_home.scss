@@ -1,8 +1,8 @@
 main.home {
   section.home__hero {
     position: relative;
-    height: 100vh;
-    max-height: 100vh;
+    height: calc(100vh - var(--navHeight));
+    max-height: calc(100vh - var(--navHeight));
     overflow: hidden;
 
     .home__banner {
@@ -165,12 +165,14 @@ main.home {
     color: white;
 
     .home__projets__item {
-      --projetItemBottomPadding: 12rem;
+      --projetItemBottomPadding: 9rem;
+      --projetItemTopPadding: 3rem;
 
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding-bottom: var(--projetItemBottomPadding);
+      padding-top: var(--projetItemTopPadding);
 
       &.home__projets__item--right {
         > div {
@@ -354,6 +356,8 @@ main.home {
 
     section.home__projets .home__projets__item {
       --projetItemBottomPadding: 6rem;
+      --projetItemTopPadding: 2rem;
+
       flex-direction: column;
 
       &.home__projets__item--visible {
@@ -483,6 +487,7 @@ main.home {
     }
     section.home__projets .home__projets__item {
       --projetItemBottomPadding: 3rem;
+      --projetItemTopPadding: 1rem;
 
       > div p {
         font-size: 1rem;
