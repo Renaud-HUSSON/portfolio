@@ -7,20 +7,6 @@
   scrollbar-color: hsla(0, 0%, 60.8%, 0.5) white;
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: var(--navHeight);
-
-  a {
-    font-family: 'Amatic SC';
-    font-size: 2.2rem;
-    color: var(--black);
-    text-decoration: none;
-  }
-}
-
 h3 span,
 pinklines {
   font-size: var(--h3fontSize);
