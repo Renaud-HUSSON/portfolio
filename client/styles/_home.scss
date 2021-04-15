@@ -125,7 +125,7 @@ main.home {
 
           @for $i from 0 through 100 {
             mask#mask#{$i} rect {
-              animation: writeCode 0.5s forwards linear;
+              animation: scaleX 0.5s forwards linear;
               animation-delay: $i * 0.5s + 1.2s;
             }
           }
@@ -164,15 +164,19 @@ main.home {
     background-color: var(--black);
     color: white;
 
+    h2 {
+      font-size: var(--h2fontSize);
+      font-family: 'Amatic SC';
+      padding-bottom: var(--contentPaddingY);
+    }
+
     .home__projets__item {
-      --projetItemBottomPadding: 9rem;
-      --projetItemTopPadding: 3rem;
+      --projetItemBottomPadding: 12rem;
 
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding-bottom: var(--projetItemBottomPadding);
-      padding-top: var(--projetItemTopPadding);
 
       &.home__projets__item--right {
         > div {
@@ -356,7 +360,6 @@ main.home {
 
     section.home__projets .home__projets__item {
       --projetItemBottomPadding: 6rem;
-      --projetItemTopPadding: 2rem;
 
       flex-direction: column;
 
@@ -487,7 +490,6 @@ main.home {
     }
     section.home__projets .home__projets__item {
       --projetItemBottomPadding: 3rem;
-      --projetItemTopPadding: 1rem;
 
       > div p {
         font-size: 1rem;

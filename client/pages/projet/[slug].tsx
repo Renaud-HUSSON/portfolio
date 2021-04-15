@@ -12,10 +12,12 @@ interface ProjetProps {
 
 const ProjetPage = ({ projet }: ProjetProps) => {
   return (
-    <main>
+    <main className='projet'>
+      <section className='projet__galerie'>
+        <Video projet={projet} />
+        <Images projet={projet} />
+      </section>
       <Presentation projet={projet} />
-      <Video projet={projet} />
-      <Images projet={projet} />
     </main>
   )
 }

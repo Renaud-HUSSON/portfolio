@@ -1,279 +1,218 @@
-main {
+main.projet {
   --aboutFontSize: 1.5rem;
-  --h1FontSize: 6rem;
+  --h1FontSize: 3rem;
   --descriptionFontSize: 1.5rem;
 
-  h2 {
-    @extend pinklines;
+  display: flex;
+  width: 100%;
+  gap: 5vw;
+  padding: var(--contentPaddingY) var(--contentPaddingX);
 
-    font-size: var(--aboutFontSize);
-    font-weight: 700;
-    font-family: 'Antic';
-    padding-bottom: 0;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+  section.projet__galerie {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    width: 60%;
+    padding: 0;
 
-    &::before,
-    &::after {
-      width: 25px;
-      height: 4px;
+    video,
+    img {
+      box-shadow: 1px 1px 20px
+        rgba(var(--blackR), var(--blackG), var(--blackB), 0.7);
+      opacity: 0;
+      transform: translateY(-3rem);
+      transition: 0.8s;
     }
 
-    &::before {
-      top: -4px;
+    .projet__galerie__image--visible,
+    .projet__galerie__video--visible {
+      opacity: 1;
+      transform: translateY(0);
     }
 
-    &::after {
-      transform: translateY(calc(-50% + 4px));
+    video {
+      width: 100%;
+    }
+
+    > img,
+    .projet__images__mobile img {
+      width: 100%;
+    }
+
+    .projet__images__mobile {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
     }
   }
 
   section.projet__presentation {
-    nav {
-      height: auto;
-      margin-bottom: 1rem;
-    }
+    width: 40%;
+    padding: 0;
+    position: sticky;
+    top: 3rem;
+    height: fit-content;
 
-    .projet__presentation__content {
+    div.projet__presentation__text {
       display: flex;
-      justify-content: space-between;
-      padding-top: var(--contentPaddingY);
+      flex-direction: column;
+      gap: 2rem;
+      padding-bottom: 3rem;
 
-      p.projet__presentation__text__about,
-      h1,
-      .projet__presentation__informations p.bigger,
-      .projet__presentation__informations__technologies ul li,
-      .projet__presentation__informations__date > p:not(.bigger),
-      p.projet__presentation__text__visit,
-      .projet__presentation__github,
-      .projet__presentation__url {
+      h1 {
         overflow: hidden;
 
         span {
+          @extend pinklines;
+
+          font-size: var(--h1FontSize);
+          font-family: 'Amatic SC';
+          text-transform: uppercase;
+          margin-bottom: 0;
           opacity: 0;
-          animation: fadeInFromTop 0.4s forwards;
-          display: inline-block;
+          animation: fadeInFromTop 0.6s forwards;
         }
       }
 
-      div.projet__presentation__text {
-        width: 70%;
+      pre {
+        white-space: pre-wrap;
+        opacity: 0;
+        animation: fadeIn 1.2s forwards;
+        animation-delay: 0.2s;
+      }
 
-        p.projet__presentation__text__about span {
-          @extend h2;
+      p.projet__presentation__text__visit {
+        background-color: var(--pink);
+        width: fit-content;
+        transform-origin: left;
+        transform: scaleX(0);
+        animation: scaleX 0.8s forwards;
+        animation-delay: 0.5s;
+
+        a {
+          color: white;
+          text-decoration: none;
           display: flex;
-        }
-
-        h1 {
-          span {
-            font-size: var(--h1FontSize);
-            text-transform: uppercase;
-            font-family: 'Amatic SC';
-            line-height: 0.9em;
-            animation-delay: 0.15s;
-            animation-duration: 0.95s;
-          }
-        }
-
-        p.projet__presentation__github,
-        p.projet__presentation__url {
-          padding-bottom: 0.5rem;
-        }
-
-        pre.projet__presentation__text__description {
-          padding-top: 1rem;
-          font-size: var(--descriptionFontSize);
-          white-space: pre-wrap;
-          padding-bottom: 2rem;
+          align-items: center;
+          gap: 0.5rem;
+          padding: 0.5rem 1rem;
           opacity: 0;
-          animation: fadeIn 1.2s forwards;
-          animation-delay: 0.5s;
-        }
+          animation: fadeInFromTop 0.6s forwards;
+          animation-delay: 1s;
 
-        p.projet__presentation__text__visit span {
-          animation-delay: 0.7s;
-        }
-
-        p.projet__presentation__text__visit {
-          font-size: var(--aboutFontSize);
-
-          a {
-            text-decoration: none;
-
-            svg {
-              margin-left: 0.5rem;
-            }
+          svg path {
+            fill: white;
           }
         }
       }
+    }
 
-      .projet__presentation__informations {
-        > div {
-          padding-bottom: 2rem;
+    div.projet__presentation__informations {
+      display: flex;
+      justify-content: space-between;
 
-          &:last-of-type {
-            padding-bottom: 0;
-          }
+      h2 {
+        margin-bottom: 1rem;
+
+        span {
+          font-size: 1.375rem;
+          font-weight: 500;
         }
+      }
 
-        p.bigger {
-          font-size: 1.25rem;
-          font-weight: bold;
-          padding-bottom: 1rem;
+      > div h2 {
+        overflow: hidden;
+
+        span {
+          display: inline-block;
+          opacity: 0;
+          animation: fadeInFromTop 0.6s forwards;
+          animation-delay: 1.2s;
         }
+      }
 
-        p:not(.bigger),
-        li {
-          font-size: 1.125rem;
-        }
+      div.projet__presentation__informations__technologies {
+        ul {
+          list-style: none;
 
-        .projet__presentation__informations__technologies {
-          width: fit-content;
+          li {
+            margin-bottom: 0.25rem;
+            overflow: hidden;
 
-          > p.bigger span {
-            animation-delay: 0.6s;
-          }
-
-          ul {
-            list-style: none;
-
-            li {
-              letter-spacing: 0.1em;
-              padding-bottom: 0.25rem;
-
-              @for $i from 0 through 15 {
-                &.projet__presentation__informations__technologies--#{$i} span {
-                  animation-delay: calc(0.8s + #{$i} * 0.1s);
-                }
+            @for $i from 0 through 30 {
+              &.projet__presentation__informations__technologies--#{$i} span {
+                opacity: 0;
+                display: inline-block;
+                animation: fadeInFromTop 0.5s forwards;
+                animation-delay: calc(1.4s + #{$i} * 0.1s);
               }
             }
           }
         }
+      }
 
-        .projet__presentation__informations__date {
-          > p.bigger span {
-            animation-delay: 1s;
-          }
+      div.projet__presentation__informations__date p {
+        overflow: hidden;
 
-          > p:not(.bigger) span {
-            animation-delay: 1.15s;
-          }
+        span {
+          opacity: 0;
+          display: inline-block;
+          animation: fadeInFromTop 0.5s forwards;
+          animation-delay: 1.4s;
+        }
+      }
 
-          &:nth-child(3) {
-            > p.bigger span {
-              animation-delay: 1.25s;
-            }
+      div.projet__presentation__informations__links p {
+        margin-bottom: 0.25rem;
+        overflow: hidden;
 
-            > p:not(.bigger) span {
-              animation-delay: 1.4s;
-            }
-          }
+        a {
+          color: var(--pink);
         }
 
-        .projet__presentation__informations__links {
-          > p.bigger span {
+        span {
+          opacity: 0;
+          display: inline-block;
+          animation: fadeInFromTop 0.5s forwards;
+
+          &:nth-of-type(1) {
             animation-delay: 1.5s;
           }
 
-          > p:not(.bigger) span {
-            animation-delay: 1.65s;
+          &:nth-of-type(2) {
+            animation-delay: 1.6s;
           }
         }
       }
     }
   }
+}
 
-  section.projet__video {
-    padding-top: 0;
-  }
+@media screen and (max-width: 1535px) {
+  main.projet
+    section.projet__presentation
+    div.projet__presentation__informations {
+    display: grid;
+    grid-template-columns: repeat(2, fit-content(200px));
 
-  section.projet__video {
-    video {
-      width: 100%;
-      box-shadow: 6px 6px 25px;
-      margin-top: 2rem;
-    }
-  }
-
-  section.projet__images {
-    padding: 0;
-    margin: 2rem var(--contentPaddingX);
-
-    &.projet__images--visible {
-      h2,
-      > div {
-        animation: fadeIn 1s forwards;
-      }
-
-      > div {
-        animation-delay: 0.2s;
-
-        &:last-of-type {
-          animation-delay: 0.4s;
-        }
-      }
-    }
-
-    h2 {
-      margin-bottom: var(--contentPaddingY);
-      opacity: 0;
-    }
-
-    > div {
-      display: flex;
-      gap: 2rem;
-      opacity: 0;
-
-      img {
-        max-height: 30vh;
-        min-height: 250px;
-      }
-
-      &:first-of-type {
-        margin-bottom: var(--contentPaddingY);
-      }
+    > * {
+      padding-bottom: 1rem;
     }
   }
 }
 
-@media (max-width: 991px) {
-  main {
-    --aboutFontSize: 1.5rem;
-    --descriptionFontSize: 1.25rem;
+@media screen and (max-width: 991px) {
+  main.projet {
+    flex-direction: column;
+
+    section.projet__galerie {
+      order: 1;
+      width: 100%;
+    }
 
     section.projet__presentation {
-      a svg {
-        transform-origin: left;
-        transform: scale(0.7);
-      }
-
-      .projet__presentation__content {
-        display: block;
-
-        div.projet__presentation__text {
-          width: 100%;
-        }
-
-        div.projet__presentation__informations {
-          padding-top: 3rem;
-          display: flex;
-          justify-content: space-between;
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 768px) {
-  main {
-    --aboutFontSize: 1.25rem;
-    --h1FontSize: 3rem;
-    --descriptionFontSize: 1rem;
-
-    section.projet__presentation
-      .projet__presentation__content
-      div.projet__presentation__informations {
-      display: block;
+      position: static;
+      width: 100%;
     }
   }
 }
