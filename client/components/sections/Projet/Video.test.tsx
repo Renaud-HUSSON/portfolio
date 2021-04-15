@@ -32,16 +32,16 @@ describe('Project Video', () => {
     debut: new Date(),
     fin: new Date(),
   }
-
+  const visibleClassName = 'projet__galerie__video--visible'
   const videoTestId = 'project-video'
 
-  it('should trigger video playing when the video is in view', () => {
+  it('should add a new class when the video is in view', () => {
     render(<Video projet={projet} />)
 
     mockAllIsIntersecting(false)
-    expect(screen.getByTestId(videoTestId).dataset.playing).toBe('false')
+    expect(screen.getByTestId(videoTestId)).not.toHaveClass(visibleClassName)
 
     mockAllIsIntersecting(true)
-    expect(screen.getByTestId(videoTestId).dataset.playing).toBe('true')
+    expect(screen.getByTestId(videoTestId)).toHaveClass(visibleClassName)
   })
 })

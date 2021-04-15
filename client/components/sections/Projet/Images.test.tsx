@@ -40,8 +40,4 @@ describe('Project Images', () => {
     expect(screen.getByAltText('alternativetext')).toBeInTheDocument()
     expect(screen.getByAltText('mobile alternativetext')).toBeInTheDocument()
   })
-
-  it('should render title', () => {
-    expect(screen.getByText('Illustrations du site')).toBeInTheDocument()
-  })
 })

@@ -62,7 +62,7 @@ describe('Project Presentation', () => {
   const githubTestId = 'project-github'
   const urlTestId = 'project-url'
   const technologyTestId = 'project-techonology'
-  const visitSiteTestId = 'project-visit-site'
+  const visitSiteTestId = 'button-link'
 
   it('should render project properties', () => {
     render(<Presentation projet={projet} />)
