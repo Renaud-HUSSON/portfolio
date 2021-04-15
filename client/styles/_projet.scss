@@ -81,28 +81,11 @@ main.projet {
         animation-delay: 0.2s;
       }
 
-      p.projet__presentation__text__visit {
-        background-color: var(--pink);
-        width: fit-content;
-        transform-origin: left;
-        transform: scaleX(0);
-        animation: scaleX 0.8s forwards;
+      a.projet__presentation__text__visit {
         animation-delay: 0.5s;
 
-        a {
-          color: white;
-          text-decoration: none;
-          display: flex;
-          align-items: center;
-          gap: 0.5rem;
-          padding: 0.5rem 1rem;
-          opacity: 0;
-          animation: fadeInFromTop 0.6s forwards;
+        span {
           animation-delay: 1s;
-
-          svg path {
-            fill: white;
-          }
         }
       }
     }
