@@ -11,6 +11,7 @@
   "dependencies": {
     "@apollo/client": "^3.3.14",
     "dateformat": "^4.5.1",
+    "framer-motion": "^4.1.5",
     "graphql": "^15.5.0",
     "next": "latest",
     "react": "^17.0.1",

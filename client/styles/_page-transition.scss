@@ -1,0 +1,16 @@
+div.page-transition {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2000;
+
+  &.page-transition-black {
+    background-color: var(--black);
+  }
+
+  &.page-transition-pink {
+    background-color: var(--pink);
+  }
+}
