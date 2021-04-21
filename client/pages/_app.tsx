@@ -1,11 +1,13 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { AppProps } from 'next/app'
+import { useUpdateScroll } from '../hooks/useUpdateScroll'
 import '../styles/index.scss'
 import { variants, variantsPink, mainVariant } from '../utils/framerMotion'
 
 function MyApp({ Component, pageProps, router }: AppProps) {
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  useUpdateScroll(1.25)
+
+  return (
     <AnimatePresence exitBeforeEnter initial={false}>
       <motion.div key={router.route}>
         <motion.div variants={mainVariant} initial='visible' exit='hidden'>

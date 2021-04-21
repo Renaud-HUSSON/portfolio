@@ -37,7 +37,7 @@ export const Button = ({
   )
 
   return link ? (
-    <Link href={link}>
+    <Link href={link} scroll={false}>
       <a className={`button ${className}`} {...rest} data-testid='button-link'>
         {content}
       </a>
