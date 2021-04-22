@@ -1,3 +1,6 @@
 .env
 node_modules
 data/
+docker-compose.prod.yml
+/client/public/sitemap.xml
+init-letsencrypt.sh
