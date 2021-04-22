@@ -19,6 +19,7 @@ export const Video = ({ projet }: VideoProps) => {
       loop
       data-testid='project-video'
       autoPlay
+      muted
       ref={ref}
       className={inView ? 'projet__galerie__video--visible' : ''}
     ></video>
