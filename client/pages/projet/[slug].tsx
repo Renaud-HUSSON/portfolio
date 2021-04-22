@@ -12,6 +12,23 @@ interface ProjetProps {
 }
 
 const ProjetPage = ({ projet }: ProjetProps) => {
+  if (!projet) {
+    projet = {
+      nom: '',
+      slug: '',
+      images_mobile: [],
+      images_pc: [],
+      long_description: '',
+      technologies: [],
+      video: {
+        alternativeText: '',
+        url: '',
+      },
+      debut: new Date(),
+      fin: new Date(),
+    }
+  }
+
   return (
     <main className='projet'>
       <NextSeo
@@ -76,7 +93,7 @@ export const getStaticProps: GetStaticProps<ProjetProps> = async ({
 
   return {
     props: {
-      projet: data.projets[0],
+      projet: data?.projets?.[0],
     },
     revalidate: 5,
   }
