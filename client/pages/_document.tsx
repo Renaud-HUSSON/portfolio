@@ -6,7 +6,6 @@ import Document, {
   DocumentContext,
   DocumentInitialProps,
 } from 'next/document'
-import { Layout } from '../components/common/Layout/Layout'
 
 class CustomDocument extends Document {
   static async getInitialProps(
@@ -21,12 +20,8 @@ class CustomDocument extends Document {
       <Html lang='fr'>
         <Head />
         <body>
-          <Layout>
-            <>
-              <Main />
-              <NextScript />
-            </>
-          </Layout>
+          <Main />
+          <NextScript />
         </body>
       </Html>
     )

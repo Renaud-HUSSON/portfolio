@@ -1,5 +1,6 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { AppProps } from 'next/app'
+import { Layout } from '../components/common/Layout/Layout'
 import { useUpdateScroll } from '../hooks/useUpdateScroll'
 import '../styles/index.scss'
 import { variants, variantsPink, mainVariant } from '../utils/framerMotion'
@@ -11,7 +12,9 @@ function MyApp({ Component, pageProps, router }: AppProps) {
     <AnimatePresence exitBeforeEnter initial={false}>
       <motion.div key={router.route}>
         <motion.div variants={mainVariant} initial='visible' exit='hidden'>
-          <Component {...pageProps} />
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
         </motion.div>
         <motion.div
           variants={variants}
