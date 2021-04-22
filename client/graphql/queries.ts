@@ -7,7 +7,7 @@ export const GET_HOME_DATA = gql`
     banner {
       description
     }
-    projets {
+    projets(sort: "id:DESC") {
       ...CoreProjectFields
       banner {
         url
