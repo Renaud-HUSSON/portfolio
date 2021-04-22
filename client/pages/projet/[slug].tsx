@@ -5,6 +5,7 @@ import { ProjetPage as ProjetPageInterface } from '../../interfaces'
 import { Presentation } from '../../components/sections/Projet/Presentation'
 import { Images } from '../../components/sections/Projet/Images'
 import { Video } from '../../components/sections/Projet/Video'
+import { NextSeo } from 'next-seo'
 
 interface ProjetProps {
   projet: ProjetPageInterface
@@ -13,6 +14,42 @@ interface ProjetProps {
 const ProjetPage = ({ projet }: ProjetProps) => {
   return (
     <main className='projet'>
+      <NextSeo
+        title={`Renaud HUSSON - ${projet.nom}`}
+        description={projet.long_description}
+        openGraph={{
+          title: `Renaud HUSSON - ${projet.nom}`,
+          description: projet.long_description,
+          type: 'website',
+          images: [
+            {
+              url: 'https://renaudhusson.fr/ogbanner.big.jpg',
+              width: 1920,
+              height: 1080,
+              alt: 'Site de Renaud HUSSON',
+            },
+            {
+              url: 'https://renaudhusson.fr/ogbanner.jpg',
+              width: 720,
+              height: 405,
+              alt: 'Site de Renaud HUSSON',
+            },
+            {
+              url: 'https://renaudhusson.fr/ogbanner.min.jpg',
+              width: 300,
+              height: 169,
+              alt: 'Site de Renaud HUSSON',
+            },
+          ],
+          profile: {
+            firstName: 'Renaud',
+            lastName: 'HUSSON',
+          },
+        }}
+        twitter={{
+          cardType: 'summary_large_image',
+        }}
+      />
       <section className='projet__galerie'>
         <Video projet={projet} />
         <Images projet={projet} />
