@@ -1,6 +1,6 @@
 main.projet {
   --aboutFontSize: 1.5rem;
-  --h1FontSize: 3rem;
+  --h1FontSize: 2rem;
   --descriptionFontSize: 1.5rem;
 
   display: flex;
@@ -66,11 +66,24 @@ main.projet {
           @extend pinklines;
 
           font-size: var(--h1FontSize);
-          font-family: 'Amatic SC';
           text-transform: uppercase;
           margin-bottom: 0;
           opacity: 0;
           animation: fadeInFromTop 0.6s forwards;
+
+          &::after,
+          &::before {
+            height: 3px;
+            width: 25px;
+          }
+
+          &::before {
+            top: -4px;
+          }
+
+          &::after {
+            transform: translateY(calc(-50% + 4px));
+          }
         }
       }
 
@@ -181,6 +194,12 @@ main.projet {
     > * {
       padding-bottom: 1rem;
     }
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  main.projet {
+    --h1FontSize: 1.8rem;
   }
 }
 
