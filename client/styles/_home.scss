@@ -481,27 +481,21 @@ main.home {
 
 @media screen and (max-width: 768px) {
   main.home {
-    section.home__hero {
-      nav p {
-        font-size: 1.75rem;
-      }
-
-      .home__banner {
-        .home__banner__left {
-          .home__banner__logo div {
-            h1 {
-              font-size: 20vw;
-            }
-
-            p {
-              font-size: 5vw;
-              letter-spacing: 1.2vw;
-            }
+    section.home__hero .home__banner {
+      .home__banner__left {
+        .home__banner__logo div {
+          h1 {
+            font-size: 20vw;
           }
 
-          > p {
-            font-size: 1rem;
+          p {
+            font-size: 5vw;
+            letter-spacing: 1.2vw;
           }
+        }
+
+        > p {
+          font-size: 1rem;
         }
       }
     }

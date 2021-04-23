@@ -11,7 +11,7 @@
 
   --blue: #58ade2;
 
-  --navHeight: 10rem;
+  --navHeight: 6rem;
   --h2fontSize: 5rem;
   --h3fontSize: 2.5rem;
 
@@ -22,7 +22,7 @@
 
 @media screen and (max-width: 1279px) {
   :root {
-    --navHeight: 6.5rem;
+    --navHeight: 5rem;
     --h2fontSize: 4rem;
     --h3fontSize: 2.25rem;
 
@@ -40,7 +40,7 @@
 
 @media screen and (max-width: 768px) {
   :root {
-    --navHeight: 5rem;
+    --navHeight: 4rem;
     --h2fontSize: 3rem;
     --h3fontSize: 1.75rem;
 
