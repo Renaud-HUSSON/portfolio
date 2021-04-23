@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@apollo/client": "^3.3.14",
+    "@types/react-ga": "^2.3.0",
     "dateformat": "^4.5.1",
     "framer-motion": "^4.1.5",
     "graphql": "^15.5.0",
@@ -19,6 +20,7 @@
     "next-sitemap": "^1.6.25",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-ga": "^3.3.0",
     "react-indiana-drag-scroll": "^1.8.1",
     "react-intersection-observer": "^8.31.0",
     "react-tsparticles": "^1.25.0",
