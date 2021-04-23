@@ -133,18 +133,6 @@ main.home {
       }
     }
 
-    &::after {
-      content: 'DEV';
-      font-family: 'Squada One';
-      font-size: 50vw;
-      color: rgba(var(--pinkR), var(--pinkG), var(--pinkB), 0.05);
-      position: absolute;
-      top: 50vh;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: -10;
-    }
-
     .home__banner__arrow {
       cursor: pointer;
       position: absolute;
@@ -284,6 +272,18 @@ main.home {
         }
       }
     }
+  }
+
+  &::after {
+    content: 'DEV';
+    font-family: 'Squada One';
+    font-size: 50vw;
+    color: rgba(var(--pinkR), var(--pinkG), var(--pinkB), 0.05);
+    position: absolute;
+    top: 50vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -10;
   }
 }
 
