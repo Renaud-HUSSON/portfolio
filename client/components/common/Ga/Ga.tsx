@@ -7,13 +7,13 @@ interface GaProps {
 
 export const Ga = ({ children }: GaProps) => {
   useEffect(() => {
-    // if (process.env.NODE_ENV === 'production') {
-    if (!window.GA_INITIALIZED) {
-      initGA()
-      window.GA_INITIALIZED = true
+    if (process.env.NODE_ENV === 'production') {
+      if (!window.GA_INITIALIZED) {
+        initGA()
+        window.GA_INITIALIZED = true
+      }
+      logPageView()
     }
-    logPageView()
-    // }
   }, [])
 
   return <>{children}</>
