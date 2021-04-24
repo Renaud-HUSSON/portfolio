@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import { ReactChild } from 'react'
+import { Footer } from '../Footer/Footer'
 import { Nav } from '../Nav/Nav'
 
 interface LayoutProps {
@@ -43,6 +44,7 @@ export const Layout = ({ children }: LayoutProps) => {
       </Head>
       <Nav />
       {children}
+      <Footer />
     </>
   )
 }

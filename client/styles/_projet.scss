@@ -7,6 +7,7 @@ main.projet {
   width: 100%;
   gap: 5vw;
   padding: var(--contentPaddingY) var(--contentPaddingX);
+  padding-bottom: clamp(3rem, var(--contentPaddingY), var(--contentPaddingY));
 
   section.projet__galerie {
     display: grid;

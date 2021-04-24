@@ -1,0 +1,27 @@
+footer {
+  background-color: var(--black);
+  padding: clamp(3rem, var(--contentPaddingY), var(--contentPaddingY))
+    var(--contentPaddingX);
+
+  div.footer__links {
+    display: flex;
+
+    a {
+      flex: 1;
+      text-align: center;
+      color: white;
+      text-decoration: none;
+    }
+  }
+
+  div.footer__socials {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3rem;
+
+    svg {
+      fill: white;
+    }
+  }
+}
