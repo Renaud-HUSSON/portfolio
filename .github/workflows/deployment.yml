@@ -1,0 +1,24 @@
+name: Deployment workflow
+on:
+  push:
+    branches:
+      - production
+
+jobs:
+  deploy:
+    name: Deployment
+    runs-on: ubuntu-18.04
+    environment: production
+    steps:
+      - name: Deploy using ssh remote commands
+        uses: appleboy/ssh-action@master
+        with:
+          host: renaudhusson.fr
+          username: renaud
+          key: ${{ secrets.SSH_KEY }}
+          port: 22
+          script_stop: true
+          script: |
+            git pull origin production
+            docker-compose -f docker-compose.prod.yml build
+            docker-compose -f docker-compose.prod.yml up -d
