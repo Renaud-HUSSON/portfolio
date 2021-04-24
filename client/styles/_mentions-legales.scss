@@ -1,0 +1,78 @@
+main.mentions-legales {
+  min-height: calc(100vh - var(--navHeight));
+
+  section,
+  h1 {
+    padding: 2rem var(--contentPaddingX);
+  }
+
+  section {
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 0.5em;
+    }
+
+    &:last-of-type {
+      margin-bottom: 2rem;
+    }
+  }
+
+  h2 {
+    @extend pinklines;
+
+    margin-bottom: 2rem;
+    font-size: 2rem;
+
+    &::before,
+    &::after {
+      height: 3px;
+      width: 30px;
+    }
+
+    &::before {
+      top: -4px;
+    }
+
+    &::after {
+      transform: translateY(calc(-50% + 4px));
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main.mentions-legales {
+    section,
+    h1 {
+      padding: 1rem var(--contentPaddingX);
+    }
+
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    section {
+      p {
+        font-size: 1rem;
+      }
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+
+      &::before,
+      &::after {
+        height: 3px;
+        width: 20px;
+      }
+
+      &::before {
+        top: -3px;
+      }
+
+      &::after {
+        transform: translateY(calc(-50% + 3px));
+      }
+    }
+  }
+}
