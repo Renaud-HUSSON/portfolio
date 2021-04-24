@@ -218,3 +218,9 @@ main.projet {
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  main.projet section.projet__galerie div.projet__images__mobile {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
