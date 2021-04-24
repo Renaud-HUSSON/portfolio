@@ -7,6 +7,7 @@ import { GET_HOME_DATA } from '../graphql/queries'
 import { Banner, ProjetHomepage } from '../interfaces/index'
 import { NextSeo } from 'next-seo'
 import { Ga } from '../components/common/Ga/Ga'
+import { Socials } from '../components/common/Socials/Socials'
 
 interface HomeProps {
   banner: Banner
@@ -58,6 +59,7 @@ const Home = ({ banner, projets }: HomeProps) => {
         />
         <HeroBanner banner={banner} projetsRef={projetsRef} />
         <Projets projets={projets} projetsRef={projetsRef} />
+        <Socials className='socials' />
       </main>
     </Ga>
   )
