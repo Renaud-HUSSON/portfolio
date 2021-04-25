@@ -17,7 +17,7 @@ main.a-propos {
     div.a-propos__competences__sphere {
       position: relative;
       width: 40%;
-      padding-bottom: 100%;
+      padding-bottom: 40%;
 
       > div {
         position: absolute !important;
@@ -57,6 +57,7 @@ main.a-propos {
     > div
     div.a-propos__competences__sphere {
     width: 75%;
+    padding-bottom: 75%;
   }
 }
 
@@ -68,6 +69,7 @@ main.a-propos {
     div.a-propos__competences__sphere {
       margin-bottom: 2rem;
       width: 100%;
+      padding-bottom: 100%;
     }
   }
 }
