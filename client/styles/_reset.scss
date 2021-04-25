@@ -9,33 +9,33 @@
 
 h3 span,
 pinklines {
-  font-size: var(--h3fontSize);
   font-weight: 400;
   position: relative;
   display: flex;
   align-items: center;
   margin-bottom: var(--h3bottomMargin);
+  font-size: 2rem;
 
   &::before,
   &::after {
     content: '';
     display: block;
-    width: 35px;
-    height: 5px;
+    width: 25px;
+    height: 3px;
     background-color: var(--pink);
   }
 
   &::before {
     position: relative;
     margin-right: 1.5rem;
-    top: -6px;
+    top: -4px;
   }
 
   &::after {
     position: absolute;
     left: 10px;
     top: 50%;
-    transform: translateY(calc(-50% + 6px));
+    transform: translateY(calc(-50% + 4px));
   }
 }
 

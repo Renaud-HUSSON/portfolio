@@ -21,21 +21,6 @@ main.mentions-legales {
     @extend pinklines;
 
     margin-bottom: 2rem;
-    font-size: 2rem;
-
-    &::before,
-    &::after {
-      height: 3px;
-      width: 30px;
-    }
-
-    &::before {
-      top: -4px;
-    }
-
-    &::after {
-      transform: translateY(calc(-50% + 4px));
-    }
   }
 }
 
