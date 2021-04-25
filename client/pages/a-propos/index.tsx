@@ -66,7 +66,10 @@ export const getStaticProps: GetStaticProps<AboutPage> = async () => {
   const { data } = await client.query<AboutPage>({ query: GET_ABOUT_DATA })
 
   return {
-    props: data,
+    props: {
+      about: data.about ?? '',
+      competences: data.competences,
+    },
   }
 }
 
