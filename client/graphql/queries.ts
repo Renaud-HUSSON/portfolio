@@ -56,3 +56,21 @@ export const GET_PROJECT_DATA = gql`
     }
   }
 `
+
+export const GET_ABOUT_DATA = gql`
+  query {
+    about {
+      description
+    }
+    competences {
+      technology {
+        nom
+        image {
+          name
+          url
+          alternativeText
+        }
+      }
+    }
+  }
+`
