@@ -1,8 +1,9 @@
 {
-  "kind": "singleType",
+  "kind": "collectionType",
   "collectionName": "competences",
   "info": {
-    "name": "Competences"
+    "name": "Compétences",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -10,8 +11,9 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "technologies": {
-      "collection": "technologies"
+    "technology": {
+      "unique": true,
+      "model": "technologies"
     }
   }
 }
