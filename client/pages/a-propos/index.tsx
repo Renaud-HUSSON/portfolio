@@ -11,8 +11,7 @@ const APropos = ({ about, competences }: AProposProps) => {
   return (
     <main className='a-propos'>
       <Presentation description={about.description} />
-const APropos = () => {
-  return <main className='a-propos'></main>
+      <Competences competences={competences} />
     </main>
   )
 }
