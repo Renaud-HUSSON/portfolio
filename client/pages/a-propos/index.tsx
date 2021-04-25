@@ -1,5 +1,7 @@
 import { ApolloClient, InMemoryCache } from '@apollo/client'
 import { GetStaticProps } from 'next'
+import { NextSeo } from 'next-seo'
+import { Ga } from '../../components/common/Ga/Ga'
 import { Competences } from '../../components/sections/About/Competences'
 import { Presentation } from '../../components/sections/About/Presentation'
 import { GET_ABOUT_DATA } from '../../graphql/queries'
@@ -9,10 +11,49 @@ type AProposProps = AboutPage
 
 const APropos = ({ about, competences }: AProposProps) => {
   return (
-    <main className='a-propos'>
-      <Presentation description={about.description} />
-      <Competences competences={competences} />
-    </main>
+    <Ga>
+      <NextSeo
+        title='Renaud HUSSON - À Propos'
+        description="Cette page permet d'en apprendre plus sur moi, ainsi que découvrir mes compétences"
+        openGraph={{
+          title: 'Renaud HUSSON - À Propos',
+          description:
+            "Cette page permet d'en apprendre plus sur moi, ainsi que découvrir mes compétences",
+          type: 'website',
+          images: [
+            {
+              url: 'https://renaudhusson.fr/ogbanner.big.jpg',
+              width: 1920,
+              height: 1080,
+              alt: 'Site de Renaud HUSSON',
+            },
+            {
+              url: 'https://renaudhusson.fr/ogbanner.jpg',
+              width: 720,
+              height: 405,
+              alt: 'Site de Renaud HUSSON',
+            },
+            {
+              url: 'https://renaudhusson.fr/ogbanner.min.jpg',
+              width: 300,
+              height: 169,
+              alt: 'Site de Renaud HUSSON',
+            },
+          ],
+          profile: {
+            firstName: 'Renaud',
+            lastName: 'HUSSON',
+          },
+        }}
+        twitter={{
+          cardType: 'summary_large_image',
+        }}
+      />
+      <main className='a-propos'>
+        <Presentation description={about.description} />
+        <Competences competences={competences} />
+      </main>
+    </Ga>
   )
 }
 
