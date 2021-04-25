@@ -23,7 +23,9 @@ export const Competences = ({ competences }: CompetencesProps) => {
 
   return (
     <section className='a-propos__competences'>
-      <h2>Compétences</h2>
+      <h2>
+        <span>Compétences</span>
+      </h2>
       <div>
         <div className='a-propos__competences__sphere'>
           <Canvas>
