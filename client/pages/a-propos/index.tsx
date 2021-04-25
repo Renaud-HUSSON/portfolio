@@ -70,6 +70,7 @@ export const getStaticProps: GetStaticProps<AboutPage> = async () => {
       about: data.about ?? '',
       competences: data.competences,
     },
+    revalidate: 600,
   }
 }
 
