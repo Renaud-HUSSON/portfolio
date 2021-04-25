@@ -14,13 +14,6 @@
     "description": {
       "type": "text",
       "required": true
-    },
-    "competences": {
-      "type": "text",
-      "required": true
-    },
-    "parcours": {
-      "type": "text"
     }
   }
 }

@@ -5,13 +5,13 @@ export const Footer = () => {
   return (
     <footer>
       <div className='footer__links'>
-        <Link href='/'>
+        <Link href='/' scroll={false}>
           <a>Accueil</a>
         </Link>
-        <Link href='/a-propos'>
+        <Link href='/a-propos' scroll={false}>
           <a>À propos</a>
         </Link>
-        <Link href='/mentions-legales'>
+        <Link href='/mentions-legales' scroll={false}>
           <a>Mentions légales</a>
         </Link>
       </div>
