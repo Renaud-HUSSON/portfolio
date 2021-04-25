@@ -33,7 +33,7 @@ export type Video = CoreMediaFile
 
 export type Technologie = {
   nom: string
-  image?: Image
+  image: Image
 }
 export type Banner = {
   description: string
@@ -62,3 +62,30 @@ export type ProjetPage = {
 }
 
 export type Projet = ProjetHomepage & ProjetPage
+
+export type Competence = {
+  technology: Technologie
+}
+
+export type About = {
+  description: string
+}
+
+export type AboutPage = {
+  about: About
+  competences: Competence[]
+}
+
+export type Point = {
+  x: number
+  y: number
+  z: number
+}
+
+export type GetFibonacciSpherePointsResult = Point[]
+
+export type GetFibonacciSpherePoints = (
+  samples: number,
+  radius?: number,
+  randomize?: boolean
+) => GetFibonacciSpherePointsResult
