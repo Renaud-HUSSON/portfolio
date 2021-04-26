@@ -8,7 +8,9 @@ export const Presentation = ({ description }: PresentationProps) => {
       <h2>
         <span>À Propos</span>
       </h2>
-      <p>{description}</p>
+      <pre>
+        <p>{description}</p>
+      </pre>
     </section>
   )
 }

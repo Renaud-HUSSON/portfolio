@@ -10,11 +10,12 @@ main.a-propos {
     }
   }
 
-  section.a-propos__a-propos p {
+  section.a-propos__a-propos pre p {
     text-align: justify;
     opacity: 0;
     animation: fadeIn 1.5s forwards;
     animation-delay: 0.25s;
+    white-space: pre-wrap;
   }
 
   section.a-propos__competences {
