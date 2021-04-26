@@ -20,6 +20,6 @@ jobs:
           script_stop: true
           script: |
             cd portfolio
-            git pull origin production
+            git pull origin master
             docker-compose -f docker-compose.prod.yml build
             docker-compose -f docker-compose.prod.yml up -d
