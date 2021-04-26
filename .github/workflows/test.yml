@@ -1,0 +1,20 @@
+name: Test workflow
+on: push
+
+jobs:
+  deploy:
+    name: Test
+    runs-on: ubuntu-18.04
+    environment: production
+    steps:
+      - name: Launch client's unit tests
+        uses: appleboy/ssh-action@master
+        with:
+          host: renaudhusson.fr
+          username: renaud
+          key: ${{ secrets.SSH_KEY }}
+          port: 22
+          script_stop: true
+          script: |
+            cd portfolio
+            make test
