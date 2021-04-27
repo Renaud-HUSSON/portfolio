@@ -30,19 +30,19 @@ const Home = ({ banner, projets }: HomeProps) => {
             type: 'website',
             images: [
               {
-                url: 'https://renaudhusson.fr/ogbanner.big.jpg',
+                url: 'https://renaudhusson.fr/ogbanner.big.png',
                 width: 1920,
                 height: 1080,
                 alt: 'Site de Renaud HUSSON',
               },
               {
-                url: 'https://renaudhusson.fr/ogbanner.jpg',
+                url: 'https://renaudhusson.fr/ogbanner.png',
                 width: 720,
                 height: 405,
                 alt: 'Site de Renaud HUSSON',
               },
               {
-                url: 'https://renaudhusson.fr/ogbanner.min.jpg',
+                url: 'https://renaudhusson.fr/ogbanner.min.png',
                 width: 300,
                 height: 169,
                 alt: 'Site de Renaud HUSSON',
