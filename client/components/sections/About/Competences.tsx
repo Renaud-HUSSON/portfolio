@@ -28,7 +28,7 @@ export const Competences = ({ competences }: CompetencesProps) => {
       </h2>
       <div>
         <div className='a-propos__competences__sphere'>
-          <Canvas>
+          <Canvas dpr={2}>
             <group ref={groupRef}>
               {competences.map((competence, i) => {
                 return (
