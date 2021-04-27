@@ -1,4 +1,5 @@
 import { IntersectionOptions, useInView } from 'react-intersection-observer'
+import { useMediaQuery } from '../../../hooks/useMediaQuery'
 import { ProjetHomepage } from '../../../interfaces'
 import { Button } from '../../common/Button/Button'
 
@@ -8,8 +9,12 @@ interface ProjetProps {
 }
 
 export const Projet = ({ projet, index }: ProjetProps) => {
+  const isSmallLandscapeDevice = useMediaQuery(
+    '(max-width: 768px) and (orientation: landscape)'
+  )
+
   const options: IntersectionOptions = {
-    threshold: 0.6,
+    threshold: isSmallLandscapeDevice ? 0.3 : 0.6,
     triggerOnce: true,
   }
 
