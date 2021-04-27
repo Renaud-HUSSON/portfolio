@@ -1,5 +1,4 @@
-import { useFrame } from '@react-three/fiber'
-import { useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import * as THREE from 'three'
 import { Competence, Point as PointInterface } from '../../../interfaces'
 
@@ -15,9 +14,9 @@ export const Point = ({ competence, position }: BoxProps) => {
     competence.technology.image?.url!
   )
 
-  useFrame(() => {
+  useEffect(() => {
     points.current.position.fromArray(Object.values(position))
-  })
+  }, [])
 
   return (
     <points ref={points}>
@@ -25,7 +24,7 @@ export const Point = ({ competence, position }: BoxProps) => {
         <bufferAttribute
           attachObject={['attributes', 'position']}
           count={1}
-          array={[0, 0, 0]}
+          array={new Float32Array([0, 0, 0])}
           itemSize={3}
         />
       </bufferGeometry>
