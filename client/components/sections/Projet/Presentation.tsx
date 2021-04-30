@@ -1,4 +1,4 @@
-import dateFormat from 'dateformat'
+import dateFormat from '../../../utils/dateformat'
 import { ProjetPage } from '../../../interfaces'
 import { Button } from '../../common/Button/Button'
 
