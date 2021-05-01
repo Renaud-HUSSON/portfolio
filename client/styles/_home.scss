@@ -289,7 +289,7 @@ main.home {
   }
 }
 
-@media screen and (max-width: 3840px) {
+@media screen and (max-width: 3840px) and (min-width: 1921px) {
   main.home
     section.home__hero
     .home__banner
@@ -319,7 +319,7 @@ main.home {
   }
 }
 
-@media screen and (max-width: 3440px) {
+@media screen and (max-width: 3440px) and (min-width: 1921px) {
   main.home
     section.home__hero
     .home__banner
@@ -336,7 +336,7 @@ main.home {
   }
 }
 
-@media screen and (max-width: 2560px) {
+@media screen and (max-width: 2560px) and (min-width: 1921px) {
   main.home
     section.home__hero
     .home__banner
@@ -353,7 +353,7 @@ main.home {
   }
 }
 
-@media screen and (max-width: 2048px) {
+@media screen and (max-width: 2048px) and (min-width: 1921px) {
   main.home
     section.home__hero
     .home__banner
