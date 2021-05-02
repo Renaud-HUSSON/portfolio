@@ -45,7 +45,11 @@ export const Competences = ({ competences }: CompetencesProps) => {
             <h3>Liste de mes compétences:</h3>
             <ul>
               {competences.map((competence, i) => {
-                return <li key={i}>{competence.technology.nom}</li>
+                return (
+                  <li data-testid='list__skill' key={i}>
+                    {competence.technology.nom}
+                  </li>
+                )
               })}
             </ul>
           </div>
