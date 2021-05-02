@@ -17,4 +17,5 @@ jobs:
           script_stop: true
           script: |
             cd portfolio
+            npm i
             make test
