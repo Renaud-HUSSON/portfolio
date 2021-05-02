@@ -4,6 +4,7 @@ import { Competence } from '../../../interfaces'
 import { getFibonacciSpherePoints } from '../../../utils/fibonacciSpherePoints'
 import { Point } from '../../common/Point/Point'
 import * as THREE from 'three'
+import { ResizeObserver } from '@juggle/resize-observer'
 
 interface CompetencesProps {
   competences: Competence[]
@@ -28,7 +29,7 @@ export const Competences = ({ competences }: CompetencesProps) => {
       </h2>
       <div>
         <div className='a-propos__competences__sphere'>
-          <Canvas dpr={2}>
+          <Canvas dpr={2} resize={{ polyfill: ResizeObserver }}>
             <group ref={groupRef}>
               {competences.map((competence, i) => {
                 return (
