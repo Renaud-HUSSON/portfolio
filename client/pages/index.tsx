@@ -21,12 +21,11 @@ const Home = ({ banner, projets }: HomeProps) => {
     <Ga>
       <main className='home'>
         <NextSeo
-          title='Renaud HUSSON - Développeur web frontend'
-          description='Bienvenue sur mon portfolio, je suis développeur web frontend et étudiant en 1ère année de DUT Informatique à Blagnac'
+          title='Renaud HUSSON - Développeur web à Toulouse'
+          description={banner.description}
           openGraph={{
             title: 'Renaud HUSSON - Développeur web frontend',
-            description:
-              'Bienvenue sur mon portfolio, je suis développeur web frontend et étudiant en 1ère année de DUT Informatique à Blagnac',
+            description: banner.description,
             type: 'website',
             images: [
               {
